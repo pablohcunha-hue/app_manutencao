@@ -35,3 +35,10 @@ int(solicitacao["id"])
 except (ValueError, KeyError):
 pass
 return str( max(ids, default=0) + 1 )
+@app.route("/")
+def inicio():
+solicitacoes = carregar_solicitacoes()
+return render_template(
+"index.html",
+solicitacoes=solicitacoes
+)
