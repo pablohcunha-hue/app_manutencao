@@ -42,3 +42,17 @@ return render_template(
 "index.html",
 solicitacoes=solicitacoes
 )
+@app.route("/")
+def inicio():
+solicitacoes = carregar_solicitacoes()
+return render_template(
+"index.html",
+solicitacoes=solicitacoes
+)
+@app.route("/")
+def inicio():
+solicitacoes = carregar_solicitacoes()
+return render_template(
+"index.html",
+solicitacoes=solicitacoes
+)
